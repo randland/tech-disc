@@ -1,4 +1,4 @@
-require_relative '../../metaprogramming/filter_list'
+require_relative '../../../metaprogramming/filterListTake1/filter_list'
 require 'ostruct'
 
 RSpec.describe FilterList do
