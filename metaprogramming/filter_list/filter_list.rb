@@ -60,4 +60,14 @@ class FilterList
     else super
     end
   end
+
+  def respond_to?(name)
+    case name.to_s
+    when /^is_not_/
+      any? { _1.respond_to(name.gsub(/^is_not_/, ""))} || super
+    when /^is_/
+      any? { _1.respond_to(name.gsub(/^is_/, ""))} || super
+    else super
+    end
+  end
 end
