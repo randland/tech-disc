@@ -1,5 +1,5 @@
 class Event
-  attr_reader :error_message, :block, :user
+  attr_reader :error_message, :block
 
   def initialize(error_message, &block)
     @error_message = error_message
